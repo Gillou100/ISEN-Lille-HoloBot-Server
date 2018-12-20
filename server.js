@@ -19,21 +19,12 @@ var s = net.Server(function (socket)
 	// Keep the client's ip address in a variable
 	socket.ip = socket.remoteAddress.split(":")[3];
 
-	// Save our personnal IP Address
+	// Save our personnal IP Address with the hotspot TP1
 	socket.name = socket.ip;
 	switch(socket.name)
 	{
 		case "10.125.0.21":
 			socket.name = "HoloLens";
-			break;
-		case "10.125.0.41":
-			socket.name = "Gillou";
-			break;
-		case "10.125.0.43":
-			socket.name = "Jeanflo";
-			break;
-		case "10.125.0.42":
-			socket.name = "Kenneth";
 			break;
 		case "10.125.0.50":
 			socket.name = "HoloBot";
